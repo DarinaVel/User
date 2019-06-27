@@ -7,6 +7,6 @@ import java.util.List;
 public interface UserService {
     void insert(User user);
     void insertAll(List<User> users);
-    void loadAllUser();
-    void getUserByLogin(String login);
+    List<User> loadAllUser();
+    User getUserByLogin(String login);
 }

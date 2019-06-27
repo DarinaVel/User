@@ -24,16 +24,18 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void loadAllUser() {
+    public List<User> loadAllUser() {
         List<User> listUser = userDao.loadAllUser();
         for(User user: listUser){
             System.out.println(user.toString());
         }
+        return listUser;
     }
 
     @Override
-    public void getUserByLogin(String login) {
+    public User getUserByLogin(String login) {
         User user = userDao.findUserByLogin(login);
         System.out.println(user.toString());
+        return user;
     }
 }
